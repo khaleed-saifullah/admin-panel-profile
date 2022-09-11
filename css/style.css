@@ -1,0 +1,632 @@
+/* ============= Common CSS ===============*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* ============= Main Wrapper Css ============ */
+.main-wrapper {
+    min-height: 100vh;
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+}
+
+/* ============== Left Sidebar Css ============*/
+.left-sidebar {
+    background-color: #000;
+    width: 224px;
+}
+
+.logo {
+    text-align: center;
+    padding-top: 10px;
+    margin-bottom: 40px;
+}
+
+.left-sidebar-menu {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.left-sidebar-menu li {
+    display: block;
+    margin-bottom: 25px;
+    padding-left: 30px;
+}
+.left-sidebar-menu li a {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    color: #7d7d7e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.left-sidebar-menu li a:hover {
+    color: #fff;
+}
+
+.left-sidebar-menu li a:hover i {
+    color: #ff7901;
+}
+
+.left-sidebar-menu li.active {
+    border-right: 3px solid #ff7901;
+}
+
+.left-sidebar-menu li.active a {
+    color: #fff;
+}
+
+.left-sidebar-menu li.active a i {
+    color: #ff7901;
+}
+
+.left-sidebar-menu-icon {
+    margin-right: 20px;
+}
+
+.left-sidebar-menu li a.dropdown-item {
+    position: relative;
+}
+
+.left-sidebar-menu li a.dropdown-item::before {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    content: "\f107";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    transform: translateY(-50%);
+}
+
+.left-sidebar-menu li a.dropdown-item.change-icon::before {
+    content: "\f106";
+}
+
+.dropdown-menu {
+    display: none;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.dropdown-menu ul li {
+    margin-bottom: 0px;
+    padding-left: 20px;
+}
+
+.dropdown-menu ul li a {
+    display: flex;
+    padding: 5px 0;
+    align-items: center;
+    color: #7d7d7e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 30px;
+    text-decoration: none;
+}
+
+.dropdown-menu ul li a i.left-sidebar-menu-icon {
+    margin-right: 10px;
+}
+
+/* ============= Main Content Css ============*/
+.main-content {
+    width: calc(100% - 224px);
+}
+
+.main-content-header {
+    background: #000;
+}
+
+.main-content-header-info {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 30px;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.balance-info p {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 300;
+    display: flex;
+    align-items: center;
+}
+
+.balance-info p span {
+    font-size: 30px;
+    font-weight: 500;
+    color: #ff7901;
+    margin-left: 10px;
+}
+
+.user-dropdown {
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.07);
+    border-radius: 45px;
+    align-items: center;
+    padding: 10px;
+    margin-left: 30px;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.user-dropdown-menu {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 44%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #f2f2f4;
+    box-shadow: 0px 30px 20px -20px rgb(198 211 232 / 20%);
+    border-radius: 10px;
+    padding: 20px;
+    z-index: -1;
+    padding-top: 40px;
+    border-top: 0;
+}
+
+.user-dropdown-menu.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.user-dropdown-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.user-dropdown-menu ul li {
+    margin-bottom: 10px;
+}
+
+.user-dropdown-menu ul li a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: #7d7d7e;
+    text-decoration: none;
+}
+
+.user-dropdown-menu .log-out-btn {
+    background: rgba(255, 1, 1, 0.1);
+    border-radius: 5px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #ff5e5e;
+    padding: 10px 34px;
+    margin-top: 20px;
+}
+
+.user-dropdown-menu .log-out-btn img {
+    margin-right: 8px;
+}
+
+.user-dropdown-icon {
+    color: #7d7d7e;
+    margin: 0 20px;
+}
+
+.user-dropdown > img {
+    height: 40px;
+    width: 40px;
+}
+
+.user-dropdown .user-name {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-left: 10px;
+}
+
+.main-content-info {
+    background: #fcfbff;
+    padding: 30px;
+    height: calc(100% - 90px);
+}
+
+.user-info {
+    display: flex;
+}
+
+.user-profile {
+    background: #ffffff;
+    border: 1px solid #f2f2f4;
+    border-radius: 10px;
+    padding: 40px 50px 70px 50px;
+    text-align: center;
+}
+
+.user-profile h3 {
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: 500;
+    color: #26262e;
+}
+
+.user-profile img {
+    margin-bottom: 15px;
+}
+
+.user-profile p {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #7d7d7e;
+    margin-bottom: 5px;
+}
+
+.user-creditcard-info {
+    background: #fff;
+    border: 1px solid #f2f2f4;
+    border-radius: 10px;
+    margin-left: 30px;
+    padding: 70px 30px;
+    width: calc(100% - 300px);
+}
+
+.user-creditcard-info h2 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #26262e;
+}
+
+.creditcard-box {
+    margin-top: 10px;
+    display: flex;
+    width: 100%;
+}
+
+.creditcard-box-sample {
+    width: 33%;
+    border: 1px solid #f2f2f4;
+    border-radius: 10px;
+    margin-right: 30px;
+    position: relative;
+    padding: 30px;
+    transition: all 0.3s;
+}
+
+.creditcard-box-sample:last-child {
+    margin-right: 0;
+}
+
+.creditcard-box-sample h3 {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #7d7d7e;
+}
+
+.creditcard-box-sample p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 32px;
+    color: #bdbdbd;
+    margin-top: 30px;
+}
+
+.creditcard-box-sample .delete-button {
+    width: 30px;
+    height: 30px;
+    background: #f2f2f4;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    color: #bdbdbd;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.creditcard-box-sample.creditcard-box-sample-active,
+.creditcard-box-sample:hover {
+    border-color: #ff7901;
+}
+
+.creditcard-box-sample.creditcard-box-sample-active h3,
+.creditcard-box-sample.creditcard-box-sample-active p,
+.creditcard-box-sample:hover h3,
+.creditcard-box-sample:hover p {
+    color: #26262e;
+}
+
+.creditcard-box-sample.creditcard-box-sample-active .delete-button,
+.creditcard-box-sample:hover .delete-button {
+    color: #ff4242;
+    background: #ffd7d7;
+}
+
+.user-details-info-tab ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.user-details-info {
+    background: #ffffff;
+    border: 1px solid #f2f2f4;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.user-details-info-tab {
+    border-bottom: 2px solid #f2f2f4;
+    padding-top: 40px;
+}
+
+.user-details-info-tab ul li {
+    display: inline-block;
+}
+
+.user-details-info-tab ul li a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+    color: #26262e;
+    text-decoration: none;
+    padding: 0 16px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.user-details-info-tab ul li a.active {
+    color: #ff7901;
+    border-bottom: 2px solid #ff7901;
+}
+
+.email-notification-list input {
+    width: 50px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    outline: none;
+    -webkit-appearance: none;
+    position: relative;
+    border: 1px solid #ff7901;
+}
+
+.email-notification-list input:checked {
+    background-color: #ff7901;
+}
+
+.email-notification-list input:checked:before {
+    background-color: #fff;
+}
+
+.email-notification-list input::before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    border-radius: 20px;
+    background-color: #ff7928;
+    transform: scale(0.9);
+    top: 5px;
+    left: 2px;
+    transition: 0.5s;
+}
+
+.email-notification-list input:checked::before {
+    left: 26px;
+}
+
+.user-details-content {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.user-details-content-info {
+    padding: 50px 10px;
+    display: none;
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;
+}
+
+.email-notification-list {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.email-notification-list span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #26262e;
+    margin-left: 20px;
+}
+
+.email-notification-list.uncheck-list span {
+    color: #7d7d7e;
+}
+
+#email-notifications hr {
+    border-top: 1px solid #f2f2f4;
+    margin-bottom: 30px;
+}
+
+.email-notification-form {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 68px;
+}
+
+.email-notification-form-group label {
+    display: block;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 32px;
+    color: #7d7d7e;
+    margin-bottom: 10px;
+}
+
+.email-notification-form-group {
+    width: 50%;
+    padding-right: 30px;
+}
+
+.email-notification-form-group label span {
+    display: inline-block;
+    color: #ff7901;
+}
+
+.email-notification-form-group input {
+    background: #ffffff;
+    border: 1px solid #f2f2f4;
+    border-radius: 10px;
+    padding: 14px 20px;
+    width: 100%;
+}
+
+.email-notification-form-group input[type="text"]::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #bdbdbd;
+}
+
+.email-notification-form-group input[type="number"]::placeholder {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 32px;
+    color: #bdbdbd;
+}
+
+#email-notifications button {
+    background: #ff7901;
+    box-shadow: 0px 20px 50px rgba(255, 121, 1, 0.3);
+    border-radius: 5px;
+    border: 0;
+    padding: 10px 16px;
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 28px;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeEffect {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ============= Left Sidbar Toggle Menu Css ============ */
+.left-sidebar.toggle-sidemenu {
+    display: block;
+    position: absolute;
+    top: 88px;
+    height: 100%;
+    left: 0;
+    z-index: 99;
+}
+.toggle-sidebar {
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+    /*disable selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.toggle-bar,
+.toggle-bar::before,
+.toggle-bar::after,
+.toggle-sidebar.active .toggle-bar,
+.toggle-sidebar.active .toggle-bar::before,
+.toggle-sidebar.active .toggle-bar::after {
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+.toggle-bar {
+    width: 38px;
+    margin: 10px 0;
+    position: relative;
+    border-top: 6px solid #303030;
+    display: block;
+}
+.toggle-bar::before,
+.toggle-bar::after {
+    content: "";
+    display: block;
+    background: #303030;
+    height: 6px;
+    width: 38px;
+    position: absolute;
+    top: -16px;
+    -ms-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -ms-transform-origin: 13%;
+    -webkit-transform-origin: 13%;
+    transform-origin: 13%;
+}
+.toggle-bar::after {
+    top: 4px;
+}
+.toggle-sidebar.active .toggle-bar {
+    border-top: 6px solid transparent;
+}
+.toggle-sidebar.active .toggle-bar::before {
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.toggle-sidebar.active .toggle-bar::after {
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}

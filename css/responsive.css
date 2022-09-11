@@ -1,0 +1,206 @@
+@media only screen and (max-width: 1700px) {
+    .creditcard-box-sample h3,
+    .creditcard-box-sample p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .creditcard-box-sample {
+        padding: 20px;
+    }
+
+    .creditcard-box-sample h3,
+    .creditcard-box-sample p {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+    .creditcard-box-sample h3,
+    .creditcard-box-sample p {
+        font-size: 14px;
+    }
+
+    .creditcard-box-sample h3 {
+        max-width: 160px;
+    }
+
+    .user-details-content {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .creditcard-box {
+        flex-direction: column;
+    }
+
+    .creditcard-box-sample {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .creditcard-box-sample h3 {
+        max-width: none;
+    }
+
+    .creditcard-box-sample h3,
+    .creditcard-box-sample p {
+        font-size: 20px;
+    }
+
+    .user-profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .user-profile img {
+        height: 100px;
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .user-details-content {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .email-notification-form {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .email-notification-form-group {
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .creditcard-box-sample h3,
+    .creditcard-box-sample p {
+        font-size: 16px;
+    }
+
+    .user-details-info-tab ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .user-details-info-tab ul li {
+        margin-bottom: 20px;
+    }
+
+    .user-details-info-tab ul li:last-child {
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .left-sidebar {
+        display: none;
+    }
+
+    .main-content {
+        width: 100%;
+    }
+
+    .toggle-sidebar {
+        display: block;
+    }
+
+    .main-content-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .user-info {
+        flex-direction: column;
+    }
+
+    .user-creditcard-info {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 20px;
+        padding: 40px 20px;
+    }
+
+    .email-notification-list input {
+        width: 30px;
+        height: 20px;
+    }
+
+    .email-notification-list input::before {
+        height: 12px;
+        width: 12px;
+        top: 4px;
+    }
+
+    .email-notification-list input:checked::before {
+        left: 16px;
+    }
+
+    .email-notification-list span {
+        font-size: 14px;
+        margin-left: 0;
+    }
+
+    .email-notification-list {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .email-notification-form {
+        margin-left: 10px;
+    }
+
+    .email-notification-form-group label {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 500px) {
+    .main-content-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-content-header-info {
+        align-self: flex-end;
+    }
+
+    .left-sidebar.toggle-sidemenu {
+        top: 120px;
+    }
+    .balance-info p {
+        font-size: 14px;
+    }
+
+    .balance-info p span {
+        font-size: 22px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .main-content-header-info {
+        align-self: center;
+    }
+
+    .email-notification-form-group {
+        width: 100%;
+    }
+
+    .main-content-header-info {
+        flex-direction: column;
+    }
+    .balance-info {
+        margin-bottom: 20px;
+    }
+
+    .left-sidebar.toggle-sidemenu {
+        top: 187px;
+    }
+}
