@@ -11,9 +11,3 @@ Demo [ https://khaleed-saifullah.github.io/front-end-assessment/](https://khalee
 -   [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 -   [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 -   [JS](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-
-## What I have done
-
--   Raw Html
--   Raw CSS
--   Raw JavaScript
