@@ -1,6 +1,6 @@
-# Front End Assessment
+# Admin Panel
 
-### This is a simple Dashboard design
+### Design the profile page
 
 ## Live
 
