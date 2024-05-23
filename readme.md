@@ -2,10 +2,6 @@
 
 ### Design the profile page
 
-## Live
-
-Demo [ https://khaleed-saifullah.github.io/front-end-assessment/](https://khaleed-saifullah.github.io/front-end-assessment/)
-
 ## Built With
 
 -   [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
